@@ -7,7 +7,7 @@ function App() {
   const { data, error, isLoading } = useQuery<Participante[]>({
     queryKey: ['careers'],
     queryFn: async () => {
-      const response = await axios.get("http://192.168.250.170:3001/user/times");
+      const response = await axios.get("https://api-js-proyect.onrender.com/user/times");
       return response.data.data;
     },
     refetchInterval: 3000
