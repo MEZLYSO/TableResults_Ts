@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import img from "../public/icon.jpeg"
 
 function App() {
-  const { data, error, isLoading } = useQuery<Participante[]>({
+  const { data } = useQuery<Participante[]>({
     queryKey: ['careers'],
     queryFn: async () => {
       const response = await axios.get("https://api-js-proyect.onrender.com/user/times");
