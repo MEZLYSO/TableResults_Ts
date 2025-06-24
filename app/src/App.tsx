@@ -88,6 +88,7 @@ function App() {
     setOrden({ campo: "IDParticipant", direccion: "asc" });
   };
 
+
   // Función para renderizar el ícono de ordenamiento
   const renderizarIconoOrden = (campo: string) => {
     if (orden.campo !== campo) return null;
