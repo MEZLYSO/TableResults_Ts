@@ -14,7 +14,17 @@ function App() {
     refetchInterval: 3000
   });
 
-  const [participantes, setParticipantes] = useState<Participante[]>([{}]);
+  const [participantes, setParticipantes] = useState<Participante[]>([{
+    IDParticipant: "",
+    NameParticipant: "",
+    LastName_1: "",
+    LastName_2: "",
+    Category: "",
+    IDUser: "",
+    StartTime: "",
+    EndTime: "",
+    ElapsedTime: ""
+  }]);
   const [filtroCategoria, setFiltroCategoria] = useState<string>("todas");
   const [orden, setOrden] = useState<{ campo: string; direccion: "asc" | "desc" }>({
     campo: "IDParticipant",
