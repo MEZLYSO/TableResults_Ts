@@ -105,8 +105,10 @@ function App() {
 
   return (
     <div className="overflow-x-auto p-4 max-w-6xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Resultados de Participantes</h2>
-
+      <div className="flex items-center">
+        <img src="../public/icon.jpeg" className="w-20 rounded-4xl" />
+        <h2 className="text-2xl font-bold ml-2 text-gray-800">Resultados de Participantes</h2>
+      </div>
       {/* Controles de filtrado */}
       <div className="mb-6 flex flex-wrap items-center gap-4">
         <div>
@@ -129,7 +131,7 @@ function App() {
 
         <button
           onClick={() => manejarOrdenamiento("TotalTime")}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500"
         >
           Ordenar por Tiempo Total {renderizarIconoOrden("TotalTime")}
         </button>
@@ -199,7 +201,7 @@ function App() {
                   </td>
                   <td className="py-4 px-4 font-mono">{participante.StartTime}</td>
                   <td className="py-4 px-4 font-mono">{participante.EndTime}</td>
-                  <td className="py-4 px-4 font-mono font-bold text-blue-600">
+                  <td className="py-4 px-4 font-mono font-bold text-green-600">
                     {participante.TotalTime}
                   </td>
                 </tr>
