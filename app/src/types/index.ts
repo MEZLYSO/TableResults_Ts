@@ -7,5 +7,5 @@ export interface Participante {
   IDUser: string;
   StartTime: string;
   EndTime: string;
-  TotalTime: string;
+  ElapsedTime: string;
 }

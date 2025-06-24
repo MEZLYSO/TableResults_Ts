@@ -50,7 +50,7 @@ function App() {
 
     const datosOrdenados = [...participantes].sort((a, b) => {
       // Orden especial para tiempos (convertimos a segundos para comparar)
-      if (campo === "StartTime" || campo === "EndTime" || campo === "TotalTime") {
+      if (campo === "StartTime" || campo === "EndTime" || campo === "ElapsedTime") {
         const tiempoA = tiempoASegundos(a[campo]);
         const tiempoB = tiempoASegundos(b[campo]);
         return direccion === "asc" ? tiempoA - tiempoB : tiempoB - tiempoA;
@@ -203,7 +203,7 @@ function App() {
                   <td className="py-4 px-4 font-mono">{participante.StartTime}</td>
                   <td className="py-4 px-4 font-mono">{participante.EndTime}</td>
                   <td className="py-4 px-4 font-mono font-bold text-green-600">
-                    {participante.TotalTime}
+                    {participante.ElapsedTime}
                   </td>
                 </tr>
               ))
