@@ -14,7 +14,7 @@ function App() {
     refetchInterval: 3000
   });
 
-  const [participantes, setParticipantes] = useState<Participante[]>([]);
+  const [participantes, setParticipantes] = useState<Participante[]>([{}]);
   const [filtroCategoria, setFiltroCategoria] = useState<string>("todas");
   const [orden, setOrden] = useState<{ campo: string; direccion: "asc" | "desc" }>({
     campo: "IDParticipant",
@@ -101,8 +101,6 @@ function App() {
     );
   };
 
-  if (isLoading) return <div className="p-4">Loading...</div>;
-  if (error) return <div className="p-4 text-red-500">Error loading data</div>;
 
   return (
     <div className="overflow-x-auto p-4 max-w-6xl mx-auto">
