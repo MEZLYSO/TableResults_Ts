@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import type { Participante } from "./types";
 import { useState, useEffect } from "react";
+import img from "../public/icon.jpeg"
 
 function App() {
   const { data, error, isLoading } = useQuery<Participante[]>({
@@ -106,7 +107,7 @@ function App() {
   return (
     <div className="overflow-x-auto p-4 max-w-6xl mx-auto">
       <div className="flex items-center">
-        <img src="../public/icon.jpeg" className="w-20 rounded-4xl" />
+        <img src={img} className="w-20 rounded-4xl" />
         <h2 className="text-2xl font-bold ml-2 text-gray-800">Resultados de Participantes</h2>
       </div>
       {/* Controles de filtrado */}
